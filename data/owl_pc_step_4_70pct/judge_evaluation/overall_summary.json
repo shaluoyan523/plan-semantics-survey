@@ -1,0 +1,55 @@
+{
+  "model_name": "GUI-Owl-7B-pc",
+  "evaluation_time": "2026-04-05T10:01:14.676253",
+  "duration_seconds": 28082.774811,
+  "evaluator_model": "openai/gpt-5",
+  "gt_dir": "/tmp/judge_gt_2p48j7ju/gt_renamed",
+  "replay_dir": "/vepfs-mlp2/project-infoengine/guanhaoxiang/yanxiwang/GUIGaurd-Bench-master/runs/owl_pc_step_4_70pct/replay_base",
+  "total_mask_methods": 4,
+  "mask_results": [
+    {
+      "mask_method": "black",
+      "total_samples": 53,
+      "total_score": 310.0,
+      "max_score": 1360,
+      "avg_score": 0.7923852032190438,
+      "avg_consistency_rate": 0.19809630080476096,
+      "total_steps": 340
+    },
+    {
+      "mask_method": "mosaic",
+      "total_samples": 53,
+      "total_score": 290.0,
+      "max_score": 1364,
+      "avg_score": 0.7067052799097838,
+      "avg_consistency_rate": 0.17667631997744596,
+      "total_steps": 341
+    },
+    {
+      "mask_method": "randblocks",
+      "total_samples": 53,
+      "total_score": 314.0,
+      "max_score": 1352,
+      "avg_score": 0.7903675042749908,
+      "avg_consistency_rate": 0.1975918760687477,
+      "total_steps": 338
+    },
+    {
+      "mask_method": "replace_llm",
+      "total_samples": 53,
+      "total_score": 248.0,
+      "max_score": 1172,
+      "avg_score": 0.7974337321567998,
+      "avg_consistency_rate": 0.19935843303919995,
+      "total_steps": 293
+    }
+  ],
+  "overall_statistics": {
+    "total_samples": 212,
+    "total_score": 1162.0,
+    "total_max_score": 5248,
+    "avg_score_across_all": 0.7717229298901546,
+    "avg_consistency_rate_across_all": 0.19293073247253864,
+    "total_steps": 1312
+  }
+}

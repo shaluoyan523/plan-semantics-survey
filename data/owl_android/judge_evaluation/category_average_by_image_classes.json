@@ -1,0 +1,715 @@
+{
+  "source_run": "/vepfs-mlp2/project-infoengine/guanhaoxiang/yanxiwang/GUIGaurd-Bench-master/runs/owl_android",
+  "method": "For each judged task in 100pt Android run, average its black/mosaic/randblocks/replace_llm avg_score values; then average task-level scores within each image category.",
+  "note": "The benchmark files do not store explicit category labels. Categories are inferred from the primary app named in each task, following the six classes shown in the image: Social, Media, Office, System, AI, Lifestyle.",
+  "overall_task_average": 2.6228001743769176,
+  "judged_task_count": 67,
+  "category_summary": {
+    "Social": {
+      "task_count": 19,
+      "avg_score": 2.5766721364106457,
+      "tasks": [
+        {
+          "task_name": "20251031_113613_Call_the_first_person_from_Cal",
+          "task_avg_score": 2.0625,
+          "mask_scores": {
+            "black": 2.5,
+            "mosaic": 1.0,
+            "randblocks": 2.0,
+            "replace_llm": 2.75
+          }
+        },
+        {
+          "task_name": "20251031_113745_Send_a_text_message_to_David_f",
+          "task_avg_score": 3.1428571428571432,
+          "mask_scores": {
+            "black": 3.2857142857142856,
+            "mosaic": 3.2857142857142856,
+            "randblocks": 3.2857142857142856,
+            "replace_llm": 2.7142857142857144
+          }
+        },
+        {
+          "task_name": "20251031_113952_Find_conversation_with_Lee_in",
+          "task_avg_score": 2.6752873563218387,
+          "mask_scores": {
+            "black": 2.5517241379310347,
+            "mosaic": 2.103448275862069,
+            "randblocks": 3.6666666666666665,
+            "replace_llm": 2.3793103448275863
+          }
+        },
+        {
+          "task_name": "20251031_140009_Reddit__View_community_list,_c",
+          "task_avg_score": 2.5833333333333335,
+          "mask_scores": {
+            "black": 2.3333333333333335,
+            "mosaic": 2.5,
+            "randblocks": 2.5,
+            "replace_llm": 3.0
+          }
+        },
+        {
+          "task_name": "20251031_140418_Reddit__Search_'r_TwoHotTakes'",
+          "task_avg_score": 3.4166666666666665,
+          "mask_scores": {
+            "black": 3.3333333333333335,
+            "mosaic": 3.5,
+            "randblocks": 3.6666666666666665,
+            "replace_llm": 3.1666666666666665
+          }
+        },
+        {
+          "task_name": "20251031_141701_Quora__Open_second_person_in_F",
+          "task_avg_score": 2.185483870967742,
+          "mask_scores": {
+            "black": 2.3870967741935485,
+            "mosaic": 2.193548387096774,
+            "randblocks": 2.225806451612903,
+            "replace_llm": 1.935483870967742
+          }
+        },
+        {
+          "task_name": "20251031_142826_Quora__Create_new_space,_send",
+          "task_avg_score": 3.071428571428571,
+          "mask_scores": {
+            "black": 3.142857142857143,
+            "mosaic": 3.0,
+            "randblocks": 3.4285714285714284,
+            "replace_llm": 2.7142857142857144
+          }
+        },
+        {
+          "task_name": "20251102_011417_Open_Contacts,_create_a_group",
+          "task_avg_score": 3.1048387096774195,
+          "mask_scores": {
+            "black": 3.193548387096774,
+            "mosaic": 3.032258064516129,
+            "randblocks": 3.0,
+            "replace_llm": 3.193548387096774
+          }
+        },
+        {
+          "task_name": "20251102_012557_Search_Messages_for_conversati",
+          "task_avg_score": 2.2575757575757573,
+          "mask_scores": {
+            "black": 1.8636363636363635,
+            "mosaic": 2.409090909090909,
+            "randblocks": 2.590909090909091,
+            "replace_llm": 2.1666666666666665
+          }
+        },
+        {
+          "task_name": "20251102_015709_Find_contacts_with_birthdays_t",
+          "task_avg_score": 2.467741935483871,
+          "mask_scores": {
+            "black": 2.4516129032258065,
+            "mosaic": 2.3870967741935485,
+            "randblocks": 2.4516129032258065,
+            "replace_llm": 2.5806451612903225
+          }
+        },
+        {
+          "task_name": "20251102_052224_Open_Contacts,_create_a_new_co",
+          "task_avg_score": 2.625,
+          "mask_scores": {
+            "black": 2.625,
+            "mosaic": 2.5,
+            "randblocks": 2.5,
+            "replace_llm": 2.875
+          }
+        },
+        {
+          "task_name": "20251102_060353_Find_your_own_contact_card_in",
+          "task_avg_score": 3.1979166666666665,
+          "mask_scores": {
+            "black": 3.375,
+            "mosaic": 3.0416666666666665,
+            "randblocks": 3.2916666666666665,
+            "replace_llm": 3.0833333333333335
+          }
+        },
+        {
+          "task_name": "20251110_101921_猎聘：点击消息，进入猎聘小秘书，给自己添加一个新的标签",
+          "task_avg_score": 1.9085144927536233,
+          "mask_scores": {
+            "black": 1.2173913043478262,
+            "mosaic": 2.25,
+            "randblocks": 2.25,
+            "replace_llm": 1.9166666666666667
+          }
+        },
+        {
+          "task_name": "20251110_113843_网易大神：进入历史记录，点击第二条视频，将该视频转发至动态",
+          "task_avg_score": 2.4789554531490015,
+          "mask_scores": {
+            "black": 2.2857142857142856,
+            "mosaic": 2.7419354838709675,
+            "randblocks": 2.533333333333333,
+            "replace_llm": 2.3548387096774195
+          }
+        },
+        {
+          "task_name": "20251110_115435_知乎：点击消息，进入要求回答，进入第二条问题",
+          "task_avg_score": 2.489583333333333,
+          "mask_scores": {
+            "black": 1.6666666666666667,
+            "mosaic": 2.6666666666666665,
+            "randblocks": 3.0,
+            "replace_llm": 2.625
+          }
+        },
+        {
+          "task_name": "20251110_160555_小红书：先点击进入我的个人界面，查看自己的关注列表，点击第一",
+          "task_avg_score": 2.282142857142857,
+          "mask_scores": {
+            "black": 1.6,
+            "mosaic": 2.4285714285714284,
+            "randblocks": 3.4,
+            "replace_llm": 1.7
+          }
+        },
+        {
+          "task_name": "20251110_165836_网易大神：进入收藏夹，点击第二条文章，将该文章分享给_大神_",
+          "task_avg_score": 2.5,
+          "mask_scores": {
+            "black": 2.9,
+            "mosaic": 2.5,
+            "randblocks": 2.2,
+            "replace_llm": 2.4
+          }
+        },
+        {
+          "task_name": "20251110_171632_知乎：点击最近浏览，选择第二条文章，转发至想法，不写文章点发",
+          "task_avg_score": 2.3125,
+          "mask_scores": {
+            "black": 1.75,
+            "mosaic": 2.125,
+            "randblocks": 3.5,
+            "replace_llm": 1.875
+          }
+        },
+        {
+          "task_name": "20251110_214733_猎聘：进入主页的求职意向，添加一个新的求职期望，随便填写需要",
+          "task_avg_score": 2.1944444444444446,
+          "mask_scores": {
+            "black": 2.111111111111111,
+            "mosaic": 2.7777777777777777,
+            "randblocks": 2.2222222222222223,
+            "replace_llm": 1.6666666666666667
+          }
+        }
+      ]
+    },
+    "Media": {
+      "task_count": 21,
+      "avg_score": 2.672329449230522,
+      "tasks": [
+        {
+          "task_name": "20251031_114930_Open_photo_of_'boy'_in_Gallery",
+          "task_avg_score": 2.8709677419354835,
+          "mask_scores": {
+            "black": 2.935483870967742,
+            "mosaic": 2.838709677419355,
+            "randblocks": 3.0,
+            "replace_llm": 2.7096774193548385
+          }
+        },
+        {
+          "task_name": "20251031_124122_YouTube__View_Subscriptions_li",
+          "task_avg_score": 3.2916666666666665,
+          "mask_scores": {
+            "black": 4.0,
+            "mosaic": 3.1666666666666665,
+            "randblocks": 3.1666666666666665,
+            "replace_llm": 2.8333333333333335
+          }
+        },
+        {
+          "task_name": "20251031_124801_YouTube__Click_second_video_on",
+          "task_avg_score": 3.290322580645161,
+          "mask_scores": {
+            "black": 3.2580645161290325,
+            "mosaic": 3.3548387096774195,
+            "randblocks": 3.3225806451612905,
+            "replace_llm": 3.225806451612903
+          }
+        },
+        {
+          "task_name": "20251031_125742_YouTube__Enter_second_playlist",
+          "task_avg_score": 2.604838709677419,
+          "mask_scores": {
+            "black": 2.5806451612903225,
+            "mosaic": 2.5806451612903225,
+            "randblocks": 2.6774193548387095,
+            "replace_llm": 2.5806451612903225
+          }
+        },
+        {
+          "task_name": "20251031_131709_YouTube_Music__Play_second_fav",
+          "task_avg_score": 2.28125,
+          "mask_scores": {
+            "black": 2.3529411764705883,
+            "mosaic": 2.4705882352941178,
+            "randblocks": 2.176470588235294,
+            "replace_llm": 2.125
+          }
+        },
+        {
+          "task_name": "20251031_133259_Google_Play_Books__Enter_wishl",
+          "task_avg_score": 3.140625,
+          "mask_scores": {
+            "black": 3.0,
+            "mosaic": 3.125,
+            "randblocks": 3.25,
+            "replace_llm": 3.1875
+          }
+        },
+        {
+          "task_name": "20251031_133733_Google_Play_Books__Enter_libra",
+          "task_avg_score": 3.5999999999999996,
+          "mask_scores": {
+            "black": 3.566666666666667,
+            "mosaic": 3.5,
+            "randblocks": 3.6,
+            "replace_llm": 3.7333333333333334
+          }
+        },
+        {
+          "task_name": "20251031_144207_Medium__Open_third_followed_au",
+          "task_avg_score": 1.1785714285714286,
+          "mask_scores": {
+            "black": 0.8571428571428571,
+            "mosaic": 1.0,
+            "randblocks": 1.2857142857142858,
+            "replace_llm": 1.5714285714285714
+          }
+        },
+        {
+          "task_name": "20251031_144437_Medium__Open_own_stories_list,",
+          "task_avg_score": 2.8043478260869565,
+          "mask_scores": {
+            "black": 2.739130434782609,
+            "mosaic": 2.8260869565217392,
+            "randblocks": 2.782608695652174,
+            "replace_llm": 2.869565217391304
+          }
+        },
+        {
+          "task_name": "20251101_193458_Search_YouTube_for_'time_manag",
+          "task_avg_score": 2.913793103448276,
+          "mask_scores": {
+            "black": 3.0,
+            "mosaic": 3.0,
+            "randblocks": 3.0,
+            "replace_llm": 2.6551724137931036
+          }
+        },
+        {
+          "task_name": "20251101_221102_Search_Medium_for_'artificial",
+          "task_avg_score": 3.625,
+          "mask_scores": {
+            "black": 3.0,
+            "mosaic": 4.0,
+            "randblocks": 4.0,
+            "replace_llm": 3.5
+          }
+        },
+        {
+          "task_name": "20251102_022239_Search_Google_Play_Books_for_'",
+          "task_avg_score": 2.467741935483871,
+          "mask_scores": {
+            "black": 2.161290322580645,
+            "mosaic": 2.774193548387097,
+            "randblocks": 2.5806451612903225,
+            "replace_llm": 2.3548387096774195
+          }
+        },
+        {
+          "task_name": "20251102_024136_Search_YouTube_Music_for_'focu",
+          "task_avg_score": 2.328052995391705,
+          "mask_scores": {
+            "black": 2.193548387096774,
+            "mosaic": 1.8928571428571428,
+            "randblocks": 2.838709677419355,
+            "replace_llm": 2.3870967741935485
+          }
+        },
+        {
+          "task_name": "20251102_031902_Open_Camera_app,_switch_to_nig",
+          "task_avg_score": 2.6891495601173023,
+          "mask_scores": {
+            "black": 2.6451612903225805,
+            "mosaic": 2.5483870967741935,
+            "randblocks": 3.272727272727273,
+            "replace_llm": 2.2903225806451615
+          }
+        },
+        {
+          "task_name": "20251102_032811_Create_mood_playlists_in_YouTu",
+          "task_avg_score": 2.466666666666667,
+          "mask_scores": {
+            "black": 2.4,
+            "mosaic": 2.4,
+            "randblocks": 2.533333333333333,
+            "replace_llm": 2.533333333333333
+          }
+        },
+        {
+          "task_name": "20251102_053817_Open_pixiv,_search_for_'Naruto",
+          "task_avg_score": 2.857142857142857,
+          "mask_scores": {
+            "black": 2.7142857142857144,
+            "mosaic": 2.7857142857142856,
+            "randblocks": 3.0714285714285716,
+            "replace_llm": 2.857142857142857
+          }
+        },
+        {
+          "task_name": "20251110_093247_bilibili：从个人主页进入关注列表，选中第二个博主，给",
+          "task_avg_score": 2.25,
+          "mask_scores": {
+            "black": 2.0,
+            "mosaic": 2.5,
+            "randblocks": 3.0,
+            "replace_llm": 1.5
+          }
+        },
+        {
+          "task_name": "20251110_094120_bilibili：进入历史记录，点击第三个视频，然后将其分享",
+          "task_avg_score": 2.25,
+          "mask_scores": {
+            "black": 2.2,
+            "mosaic": 3.2,
+            "randblocks": 1.6,
+            "replace_llm": 2.0
+          }
+        },
+        {
+          "task_name": "20251110_095557_bilibili：进入会员购，搜索_toys_，然后进入第二",
+          "task_avg_score": 2.3629032258064515,
+          "mask_scores": {
+            "black": 2.774193548387097,
+            "mosaic": 2.6774193548387095,
+            "randblocks": 2.161290322580645,
+            "replace_llm": 1.8387096774193548
+          }
+        },
+        {
+          "task_name": "20251110_100507_番茄小说：点击主页进入提现，在需要手机号的地方输入13111",
+          "task_avg_score": 2.040322580645161,
+          "mask_scores": {
+            "black": 1.935483870967742,
+            "mosaic": 2.064516129032258,
+            "randblocks": 2.3225806451612905,
+            "replace_llm": 1.8387096774193548
+          }
+        },
+        {
+          "task_name": "20251110_101330_番茄小说：搜索world，点击第二本书，查看书评",
+          "task_avg_score": 2.8055555555555554,
+          "mask_scores": {
+            "black": 2.7777777777777777,
+            "mosaic": 2.6666666666666665,
+            "randblocks": 3.111111111111111,
+            "replace_llm": 2.6666666666666665
+          }
+        }
+      ]
+    },
+    "System": {
+      "task_count": 9,
+      "avg_score": 2.798968298883409,
+      "tasks": [
+        {
+          "task_name": "20251031_120453_Check_logged-in_Google_account",
+          "task_avg_score": 2.6666666666666665,
+          "mask_scores": {
+            "black": 2.6666666666666665,
+            "mosaic": 2.3333333333333335,
+            "randblocks": 2.6666666666666665,
+            "replace_llm": 3.0
+          }
+        },
+        {
+          "task_name": "20251031_132511_Chrome_(mobile)__View_browsing",
+          "task_avg_score": 4.0,
+          "mask_scores": {
+            "black": 4.0,
+            "mosaic": 4.0,
+            "randblocks": 4.0,
+            "replace_llm": 4.0
+          }
+        },
+        {
+          "task_name": "20251031_132632_Chrome_(mobile)__Search_local",
+          "task_avg_score": 2.8,
+          "mask_scores": {
+            "black": 2.5,
+            "mosaic": 2.9,
+            "randblocks": 2.8,
+            "replace_llm": 3.0
+          }
+        },
+        {
+          "task_name": "20251101_183234_Open_Chrome_and_search_for_'pr",
+          "task_avg_score": 2.533955857385399,
+          "mask_scores": {
+            "black": 2.375,
+            "mosaic": 2.625,
+            "randblocks": 2.6842105263157894,
+            "replace_llm": 2.4516129032258065
+          }
+        },
+        {
+          "task_name": "20251102_021259_Use_Chrome_to_open_Wikipedia,",
+          "task_avg_score": 3.217741935483871,
+          "mask_scores": {
+            "black": 3.2580645161290325,
+            "mosaic": 3.0,
+            "randblocks": 3.129032258064516,
+            "replace_llm": 3.4838709677419355
+          }
+        },
+        {
+          "task_name": "20251102_043800_Search_Chrome_for_'Kyoto_Japan",
+          "task_avg_score": 2.088709677419355,
+          "mask_scores": {
+            "black": 2.032258064516129,
+            "mosaic": 2.0,
+            "randblocks": 2.3225806451612905,
+            "replace_llm": 2.0
+          }
+        },
+        {
+          "task_name": "20251102_051400_Check_account_storage_usage_in",
+          "task_avg_score": 2.4193548387096775,
+          "mask_scores": {
+            "black": 2.3225806451612905,
+            "mosaic": 2.3225806451612905,
+            "randblocks": 2.4516129032258065,
+            "replace_llm": 2.5806451612903225
+          }
+        },
+        {
+          "task_name": "20251102_062226_Check_the_number_of_saved_pass",
+          "task_avg_score": 2.75,
+          "mask_scores": {
+            "black": 2.6,
+            "mosaic": 3.0,
+            "randblocks": 2.4,
+            "replace_llm": 3.0
+          }
+        },
+        {
+          "task_name": "20251110_100312_百度手机助手：打开百度手机助手，卸载百度",
+          "task_avg_score": 2.7142857142857144,
+          "mask_scores": {
+            "black": 2.5714285714285716,
+            "mosaic": 2.7142857142857144,
+            "randblocks": 2.5714285714285716,
+            "replace_llm": 3.0
+          }
+        }
+      ]
+    },
+    "Lifestyle": {
+      "task_count": 5,
+      "avg_score": 2.629633722012754,
+      "tasks": [
+        {
+          "task_name": "20251031_121317_Google_Fit__View_Energy_expend",
+          "task_avg_score": 2.9000000000000004,
+          "mask_scores": {
+            "black": 2.8,
+            "mosaic": 2.6,
+            "randblocks": 3.2,
+            "replace_llm": 3.0
+          }
+        },
+        {
+          "task_name": "20251102_043355_Open_Google_Maps,_search_for_'",
+          "task_avg_score": 2.337797619047619,
+          "mask_scores": {
+            "black": 1.875,
+            "mosaic": 2.3333333333333335,
+            "randblocks": 3.0,
+            "replace_llm": 2.142857142857143
+          }
+        },
+        {
+          "task_name": "20251102_045311_Search_TripAdvisor_for_'local",
+          "task_avg_score": 2.8306451612903225,
+          "mask_scores": {
+            "black": 3.032258064516129,
+            "mosaic": 3.0,
+            "randblocks": 2.870967741935484,
+            "replace_llm": 2.4193548387096775
+          }
+        },
+        {
+          "task_name": "20251110_121535_高德：点击附近的推荐，下滑点开第五篇推文",
+          "task_avg_score": 2.311868686868687,
+          "mask_scores": {
+            "black": 2.6363636363636362,
+            "mosaic": 2.3333333333333335,
+            "randblocks": 2.3333333333333335,
+            "replace_llm": 1.9444444444444444
+          }
+        },
+        {
+          "task_name": "20251110_172042_携程：搜索_hotel_，点击第二个推荐的宾馆，进行订购，按",
+          "task_avg_score": 2.7678571428571423,
+          "mask_scores": {
+            "black": 2.9285714285714284,
+            "mosaic": 2.7142857142857144,
+            "randblocks": 2.7857142857142856,
+            "replace_llm": 2.642857142857143
+          }
+        }
+      ]
+    },
+    "Office": {
+      "task_count": 8,
+      "avg_score": 2.771222773642128,
+      "tasks": [
+        {
+          "task_name": "20251031_121504_Gmail__View_'Verify'_email_in",
+          "task_avg_score": 2.35,
+          "mask_scores": {
+            "black": 2.6,
+            "mosaic": 3.0,
+            "randblocks": 2.0,
+            "replace_llm": 1.8
+          }
+        },
+        {
+          "task_name": "20251031_122302_Google_Drive__Share_'I_wanna'",
+          "task_avg_score": 2.5625,
+          "mask_scores": {
+            "black": 2.45,
+            "mosaic": 2.65,
+            "randblocks": 2.8,
+            "replace_llm": 2.35
+          }
+        },
+        {
+          "task_name": "20251031_123000_Sheets__Open_first_spreadsheet",
+          "task_avg_score": 2.8,
+          "mask_scores": {
+            "black": 2.2,
+            "mosaic": 3.2,
+            "randblocks": 2.8,
+            "replace_llm": 3.0
+          }
+        },
+        {
+          "task_name": "20251031_123532_Google_Keep__Open_first_note",
+          "task_avg_score": 3.5625,
+          "mask_scores": {
+            "black": 3.25,
+            "mosaic": 4.0,
+            "randblocks": 3.0,
+            "replace_llm": 4.0
+          }
+        },
+        {
+          "task_name": "20251031_123655_Google_Keep__Open_first_list,",
+          "task_avg_score": 3.1666666666666665,
+          "mask_scores": {
+            "black": 2.75,
+            "mosaic": 3.5,
+            "randblocks": 2.75,
+            "replace_llm": 3.6666666666666665
+          }
+        },
+        {
+          "task_name": "20251101_182344_Open_Gmail,_find_the_latest_me",
+          "task_avg_score": 2.138888888888889,
+          "mask_scores": {
+            "black": 1.7777777777777777,
+            "mosaic": 2.2222222222222223,
+            "randblocks": 2.5555555555555554,
+            "replace_llm": 2.0
+          }
+        },
+        {
+          "task_name": "20251101_192116_Open_Google_Sheets,_create_a_'",
+          "task_avg_score": 3.2827750206782467,
+          "mask_scores": {
+            "black": 2.8461538461538463,
+            "mosaic": 3.0,
+            "randblocks": 3.4516129032258065,
+            "replace_llm": 3.8333333333333335
+          }
+        },
+        {
+          "task_name": "20251102_055412_Open_Gmail_account_settings,_v",
+          "task_avg_score": 2.306451612903226,
+          "mask_scores": {
+            "black": 2.0,
+            "mosaic": 2.129032258064516,
+            "randblocks": 2.7419354838709675,
+            "replace_llm": 2.3548387096774195
+          }
+        }
+      ]
+    },
+    "AI": {
+      "task_count": 5,
+      "avg_score": 2.0286514336917563,
+      "tasks": [
+        {
+          "task_name": "20251031_135016_Gemini__View_second_chat,_ask",
+          "task_avg_score": 2.3214285714285716,
+          "mask_scores": {
+            "black": 1.8571428571428572,
+            "mosaic": 2.4285714285714284,
+            "randblocks": 2.5714285714285716,
+            "replace_llm": 2.4285714285714284
+          }
+        },
+        {
+          "task_name": "20251031_135218_Gemini__Generate_an_image,_sav",
+          "task_avg_score": 1.488095238095238,
+          "mask_scores": {
+            "black": 1.5714285714285714,
+            "mosaic": 1.6666666666666667,
+            "randblocks": 1.8571428571428572,
+            "replace_llm": 0.8571428571428571
+          }
+        },
+        {
+          "task_name": "20251031_150114_Claude__Open_new_conversation,",
+          "task_avg_score": 1.8849206349206349,
+          "mask_scores": {
+            "black": 2.4444444444444446,
+            "mosaic": 2.1666666666666665,
+            "randblocks": 0.8333333333333334,
+            "replace_llm": 2.0952380952380953
+          }
+        },
+        {
+          "task_name": "20251101_115812_Open_Gemini,_ask_'Who_is_Donal",
+          "task_avg_score": 2.611111111111111,
+          "mask_scores": {
+            "black": 3.0,
+            "mosaic": 2.888888888888889,
+            "randblocks": 2.2222222222222223,
+            "replace_llm": 2.3333333333333335
+          }
+        },
+        {
+          "task_name": "20251101_185158_Use_Gemini_to_generate_a_500-w",
+          "task_avg_score": 1.837701612903226,
+          "mask_scores": {
+            "black": 1.3548387096774193,
+            "mosaic": 1.3870967741935485,
+            "randblocks": 2.4838709677419355,
+            "replace_llm": 2.125
+          }
+        }
+      ]
+    }
+  }
+}

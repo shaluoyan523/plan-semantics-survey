@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Planner Semantics Survey</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Privacy Protection Evaluation</p>
+        <h1>Planner Semantics Survey</h1>
+      </div>
+      <nav class="viewTabs" aria-label="Main views">
+        <button type="button" class="active" data-view="survey">Survey</button>
+        <button type="button" data-view="results">Results</button>
+      </nav>
+      <div class="status" id="saveStatus">Ready</div>
+    </header>
+
+    <main class="shell" id="surveyView">
+      <aside class="sidebar" aria-label="Task controls">
+        <label class="field">
+          <span>Dataset</span>
+          <select id="datasetSelect">
+            <option value="pc">PC public set</option>
+            <option value="android">Android public set</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Protected method</span>
+          <select id="methodSelect"></select>
+        </label>
+
+        <div class="metaBox">
+          <span>Current random sample</span>
+          <p id="sampleText"></p>
+        </div>
+
+        <div class="metaBox">
+          <span>Target image</span>
+          <p id="targetText"></p>
+        </div>
+
+        <div class="metaBox">
+          <span>Instruction</span>
+          <p id="instructionText"></p>
+        </div>
+
+        <div class="actions sidebarActions">
+          <button id="saveRating" type="button">Save rating</button>
+          <button id="nextSample" type="button" class="secondary">Next random screenshot</button>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <section class="viewer" aria-label="Screenshot trajectory viewer">
+          <div class="viewerToolbar">
+            <div>
+              <strong id="imageTitle">Screenshot</strong>
+              <span id="imageCounter"></span>
+            </div>
+          </div>
+          <div class="imageStage">
+            <img id="screenshot" alt="Task screenshot" />
+            <div class="emptyState" id="emptyState">No screenshot available for this sample.</div>
+          </div>
+          <div class="imageControls">
+            <button id="prevImage" type="button" aria-label="Previous screenshot">‹</button>
+            <output id="imagePager">1 / 1</output>
+            <button id="nextImage" type="button" aria-label="Next screenshot">›</button>
+          </div>
+          <div class="imageCaption" id="imageCaption"></div>
+        </section>
+
+        <section class="plans" aria-label="Planner outputs">
+          <article class="planPanel baseline">
+            <div class="panelHeader">
+              <div>
+                <span>Baseline</span>
+                <strong>Before privacy protection</strong>
+              </div>
+              <button type="button" class="collapsePlan" data-target="before">Collapse</button>
+            </div>
+            <pre id="beforePlan"></pre>
+          </article>
+
+          <article class="planPanel comparison">
+            <div class="panelHeader">
+              <div>
+                <span>Comparison</span>
+                <strong>After privacy protection</strong>
+              </div>
+              <button type="button" class="collapsePlan" data-target="after">Collapse</button>
+            </div>
+            <pre id="afterPlan"></pre>
+          </article>
+        </section>
+
+        <section class="rating" aria-label="Semantic consistency rating">
+          <div class="ratingHeader">
+            <h2>Semantic consistency score</h2>
+            <span id="currentRating">No score selected</span>
+          </div>
+
+          <fieldset class="scoreGrid" id="scoreGrid">
+            <legend class="srOnly">Choose a score from 0 to 4</legend>
+            <label><input type="radio" name="score" value="0" /><span>0</span></label>
+            <label><input type="radio" name="score" value="1" /><span>1</span></label>
+            <label><input type="radio" name="score" value="2" /><span>2</span></label>
+            <label><input type="radio" name="score" value="3" /><span>3</span></label>
+            <label><input type="radio" name="score" value="4" /><span>4</span></label>
+          </fieldset>
+
+          <p class="criteria">
+            0 means that the two plans are completely inconsistent and describe different goals or actions; 1 means
+            that they share only superficial similarity; 2 means that they preserve the same broad intent but differ
+            in approach or implementation; 3 means that they are mostly consistent, with only minor semantic
+            differences; and 4 means that they are fully consistent and express the same action, target, and intent.
+            In our interpretation, an average score of 3.0 or above indicates that the protected planner output
+            preserves the original planning semantics to an acceptable degree.
+          </p>
+
+          <label class="field noteField">
+            <span>Optional note</span>
+            <textarea id="noteInput" rows="3" placeholder="Add a brief note if the score needs context."></textarea>
+          </label>
+        </section>
+      </section>
+    </main>
+
+    <main class="resultsView" id="resultsView" hidden>
+      <section class="resultsHeader">
+        <div>
+          <p class="eyebrow">Live Aggregation</p>
+          <h2>Score Alignment Results</h2>
+        </div>
+        <button id="refreshResults" type="button">Refresh</button>
+      </section>
+
+      <section class="metricGrid" aria-label="Result summary">
+        <article>
+          <span>Total samples</span>
+          <strong id="metricTotal">0</strong>
+        </article>
+        <article>
+          <span>Exact agreement</span>
+          <strong id="metricSame">0.0%</strong>
+        </article>
+        <article>
+          <span>Within ±1</span>
+          <strong id="metricNear">0.0%</strong>
+        </article>
+        <article>
+          <span>User ratings</span>
+          <strong id="metricUser">0</strong>
+        </article>
+      </section>
+
+      <section class="chartGrid">
+        <article class="resultPanel">
+          <div class="panelHeader">
+            <div>
+              <span>5x5 matrix</span>
+              <strong>Human score vs. LLM-as-judge score</strong>
+            </div>
+          </div>
+          <div class="matrixWrap">
+            <div class="matrixAxis yAxis">Human Judge</div>
+            <div class="matrix" id="confusionMatrix"></div>
+          </div>
+          <p class="resultNote" id="matrixNote"></p>
+        </article>
+
+        <article class="resultPanel">
+          <div class="panelHeader">
+            <div>
+              <span>Score difference</span>
+              <strong>LLM-as-judge minus human score</strong>
+            </div>
+          </div>
+          <div class="barChart" id="differenceChart"></div>
+          <p class="resultNote" id="differenceNote"></p>
+        </article>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
