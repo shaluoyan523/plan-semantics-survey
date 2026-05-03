@@ -16,21 +16,28 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          pip install huggingface_hub
-          python3 -c "
+          pip install -q huggingface_hub
+          python3 - <<'PYEOF'
+          import os
           from huggingface_hub import HfApi
-          api = HfApi(token='$HF_TOKEN')
+          token = os.environ["HF_TOKEN"]
+          api = HfApi(token=token)
           try:
-              api.repo_info(repo_id='shaluoyan523/plan-semantics-survey', repo_type='space')
-              print('Space already exists')
+              api.repo_info(repo_id="shaluoyan523/plan-semantics-survey", repo_type="space")
+              print("Space already exists")
           except Exception:
-              api.create_repo(repo_id='shaluoyan523/plan-semantics-survey', repo_type='space', space_sdk='docker', private=False)
-              print('Space created')
-          "
+              api.create_repo(
+                  repo_id="shaluoyan523/plan-semantics-survey",
+                  repo_type="space",
+                  space_sdk="docker",
+                  private=False,
+              )
+              print("Space created")
+          PYEOF
 
       - name: Push to HF Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add hf https://shaluoyan523:$HF_TOKEN@huggingface.co/spaces/shaluoyan523/plan-semantics-survey
+          git remote add hf "https://shaluoyan523:${HF_TOKEN}@huggingface.co/spaces/shaluoyan523/plan-semantics-survey"
           git push hf main --force
