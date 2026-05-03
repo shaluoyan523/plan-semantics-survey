@@ -69,8 +69,8 @@ RUNS_CONFIG: dict[str, list[dict[str, Any]]] = {
 }
 
 GT_DIRS = {
-    "pc": RUNS / "owl_pc_gt" / "gt_results",
-    "android": RUNS / "owl_android_gt" / "gt_results",
+    "pc": RUNS / "pc_gt" / "gt_results",
+    "android": RUNS / "android_gt" / "gt_results",
 }
 GT_SUFFIX = "_gt_result.json"
 RESULT_SUFFIX = "_result.json"
