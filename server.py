@@ -49,22 +49,22 @@ INITIAL_CONFUSION = [
 
 RUNS_CONFIG: dict[str, list[dict[str, Any]]] = {
     "pc": [
-        {"run_id": "step_1_10pct", "label": "10% steps",  "dir": RUNS / "owl_pc_step_1_10pct", "ladder_step": "step_1_10pct"},
-        {"run_id": "step_2_20pct", "label": "20% steps",  "dir": RUNS / "owl_pc_step_2_20pct", "ladder_step": "step_2_20pct"},
-        {"run_id": "step_3_30pct", "label": "30% steps",  "dir": RUNS / "owl_pc_step_3_30pct", "ladder_step": "step_3_30pct"},
-        {"run_id": "step_4_70pct", "label": "70% steps",  "dir": RUNS / "owl_pc_step_4_70pct", "ladder_step": "step_4_70pct"},
-        {"run_id": "step_5_80pct", "label": "80% steps",  "dir": RUNS / "owl_pc_step_5_80pct", "ladder_step": "step_5_80pct"},
-        {"run_id": "full",         "label": "Full (100%)","dir": RUNS / "owl_pc",              "ladder_step": "step_6_100pct"},
+        {"run_id": "step_1_10pct", "label": "10% steps",  "dir": RUNS / "pc_judge1", "ladder_step": "step_1_10pct"},
+        {"run_id": "step_2_20pct", "label": "20% steps",  "dir": RUNS / "pc_judge2", "ladder_step": "step_2_20pct"},
+        {"run_id": "step_3_30pct", "label": "30% steps",  "dir": RUNS / "pc_judge3", "ladder_step": "step_3_30pct"},
+        {"run_id": "step_4_70pct", "label": "70% steps",  "dir": RUNS / "pc_judge4", "ladder_step": "step_4_70pct"},
+        {"run_id": "step_5_80pct", "label": "80% steps",  "dir": RUNS / "pc_judge5", "ladder_step": "step_5_80pct"},
+        {"run_id": "full",         "label": "Full (100%)","dir": RUNS / "pc_judge6", "ladder_step": "step_6_100pct"},
     ],
     "android": [
-        {"run_id": "step_1_10pct", "label": "10% steps",  "dir": RUNS / "owl_android_step_1_10pct", "ladder_step": "step_1_10pct"},
-        {"run_id": "step_2_20pct", "label": "20% steps",  "dir": RUNS / "owl_android_step_2_20pct", "ladder_step": "step_2_20pct"},
-        {"run_id": "step_3_30pct", "label": "30% steps",  "dir": RUNS / "owl_android_step_3_30pct", "ladder_step": "step_3_30pct"},
-        {"run_id": "step_4_40pct", "label": "40% steps",  "dir": RUNS / "owl_android_step_4_40pct", "ladder_step": "step_4_40pct"},
-        {"run_id": "step_5_50pct", "label": "50% steps",  "dir": RUNS / "owl_android_step_5_50pct", "ladder_step": "step_5_50pct"},
-        {"run_id": "step_60pct",   "label": "60% steps",  "dir": RUNS / "owl_android_step_60pct",   "ladder_step": "step_60pct"},
-        {"run_id": "step_70pct",   "label": "70% steps",  "dir": RUNS / "owl_android_step_70pct",   "ladder_step": "step_70pct"},
-        {"run_id": "full",         "label": "Full (100%)","dir": RUNS / "owl_android",              "ladder_step": "step_6_100pct"},
+        {"run_id": "step_1_10pct", "label": "10% steps",  "dir": RUNS / "android_judge1", "ladder_step": "step_1_10pct"},
+        {"run_id": "step_2_20pct", "label": "20% steps",  "dir": RUNS / "android_judge2", "ladder_step": "step_2_20pct"},
+        {"run_id": "step_3_30pct", "label": "30% steps",  "dir": RUNS / "android_judge3", "ladder_step": "step_3_30pct"},
+        {"run_id": "step_4_40pct", "label": "40% steps",  "dir": RUNS / "android_judge4", "ladder_step": "step_4_40pct"},
+        {"run_id": "step_5_50pct", "label": "50% steps",  "dir": RUNS / "android_judge5", "ladder_step": "step_5_50pct"},
+        {"run_id": "step_60pct",   "label": "60% steps",  "dir": RUNS / "android_judge6", "ladder_step": "step_60pct"},
+        {"run_id": "step_70pct",   "label": "70% steps",  "dir": RUNS / "android_judge7", "ladder_step": "step_70pct"},
+        {"run_id": "full",         "label": "Full (100%)","dir": RUNS / "android_judge8", "ladder_step": "step_6_100pct"},
     ],
 }
 
